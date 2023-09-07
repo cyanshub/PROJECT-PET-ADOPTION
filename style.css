@@ -82,6 +82,9 @@ a {
   
   --action-text-color: white;
   --action-background-color: #39bae6;
+  --action-hover-background-color: #267c99;
+  --action-box-shadow: 0 1px 5px 0 rgba(87, 87, 87, 1);
+
 
   /* photo */
   --main-banner-image-url: url("https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1285&q=80");
