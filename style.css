@@ -95,7 +95,11 @@ body {
   background-color: var(--main-background-color);
 }
 
-
-
+/* 共用背景圖片樣式 */
+.background-image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /* 設定網頁主體: end */
