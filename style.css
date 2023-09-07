@@ -51,6 +51,40 @@ a {
 }
 
 
-
-
 /* reset:end */
+/* 設定網頁主體: start */
+/* 顏色參數化 */
+:root {
+  /* color */
+  --main-text-color: #333333;
+  --main-background-color: #f6f7f8;
+
+  --navbar-text-color: #267b98;
+  --header-background-color: #ffffff;
+  --header-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
+  
+  --hamburger-background-color: #267b98;
+  
+  --banner-main-text-color: #267b98;
+  --banner-sub-text-color: #ffffff;
+  --banner-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+
+  --card-text-color: #ffffff;
+  --card-background-color: #a9a9a9;
+  --card-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
+  
+  --adoption-title-text-color: #267c99;
+  --adoption-description-text-color:#5e5c5c;
+  --adoption-box-shadow: 2px 10px 12px 0px rgba(0, 0, 0, 0.1);
+  
+  --footer-text-color: #fff;
+  --footer-background-color: #4a4a4a;
+  
+  --action-text-color: white;
+  --action-background-color: #39bae6;
+}
+
+
+
+
+/* 設定網頁主體: end */
