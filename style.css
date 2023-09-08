@@ -104,10 +104,57 @@ html,body {
 }
 
 /* 共用背景圖片樣式 */
+
+
+/* 設定網頁主體: end */
+/* 設定專案樣式: start */
+/* 專案共用樣式 */
+.container {
+  width: 85%;
+  margin: 0 auto 3rem auto;
+}
+
+.action {
+  color: var(--action-text-color);
+  background-color: var(--action-background-color);
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  transition: all .1s linear;
+}
+
+.action:hover {
+  background-color: var(--action-hover-background-color);
+  box-shadow: var(--action-box-shadow);
+}
+
+@media screen and (min-width:768px){
+  .action {
+    font-size: 1.2rem;
+    padding: 0.75rem 2rem;
+  }
+}
+
 .background-image {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* 設定網頁主體: end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 設定專案樣式: end */
+
