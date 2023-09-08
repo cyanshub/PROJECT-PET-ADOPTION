@@ -143,8 +143,112 @@ html,body {
 }
 
 
+/* 標題列 header 樣式 */
+header {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  background-color: var(--header-background-color);
+  box-shadow: var(--header-box-shadow);
+  -webkit-box-shadow: var(--header-box-shadow);
+  -moz-box-shadow: var(--header-box-shadow);
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: var(--header-background-color);
+}
+
+.navbar-brand {
+  line-height: 60px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.navbar-brand-title {
+  color: var(--navbar-text-color);
+}
+
+.nav-item {
+  margin: 1.4rem 0;
+}
+
+.nav-link {
+  color: var(--navbar-text-color);
+}
 
 
+/* 標題列 header 樣式: 表單下拉功能 */
+.navbar-toggle:checked ~ .nav {
+  transform: scale(1,1);
+}
+
+.nav {
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform .3s ease-out;
+}
+
+.nav-item {
+  opacity: 0;
+}
+
+.navbar-toggle:checked ~ .nav .nav-item {
+  transition: opacity .3s ease-out 0.15s;
+  opacity: 1;
+}
+
+
+/* 手刻漢堡排選單樣式 */
+.navbar-toggle-label {
+  position: absolute;
+  right: 7.5%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 30px;
+  height: 3px;
+  background-color: var(--hamburger-background-color);
+}
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: "";
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: 8px;
+}
+
+.hamburger::after {
+  bottom: 8px;
+} 
+
+.navbar-toggle {
+  visibility: hidden;
+  position: absolute;
+}
 
 
 
