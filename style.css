@@ -296,7 +296,7 @@ header {
   padding-top: 92px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 250px);
+  grid-template-rows: repeat(2, 200px);
   grid-gap:1.5rem;
 
   grid-template-areas: 
@@ -330,6 +330,7 @@ padding: 1rem;
 
 .banner-title {
   margin-bottom: 0.4rem;
+  font-weight: 600;
 }
 
 .banner-description {
@@ -368,8 +369,31 @@ padding: 1rem;
 }
 
 
+/* 電腦版活動區banner區塊樣式，導入媒體查詢768px */
+@media screen and (min-width: 768px) {
+  .banner-wrapper {
+    grid-template-areas:
+      "main main main left"
+      "main main main right";
+  }
 
+  .main-banner {
+    justify-content: center;
+    align-items: flex-start;
+  }
 
+  .main-banner .banner-title {
+    font-size: 4rem;
+  }
+
+  .main-banner .banner-description {
+    font-size: 2rem;
+  }
+
+  .sub-banner .banner-description {
+    font-size: 1.5rem;
+  }
+}
 
 
 
