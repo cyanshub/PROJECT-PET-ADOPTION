@@ -521,7 +521,7 @@ padding: 1rem;
   }
 
   .adoption-info {
-    padding-top: 1.2rem;
+    padding: 1.2rem;
     display: grid;
     justify-items: center;
     align-content: center;
@@ -542,7 +542,27 @@ padding: 1rem;
   }
 }
 
+/* 領養資訊adoption區塊樣式，導入媒體查詢768px */
+@media screen and (min-width:768px) {
+  .adoption-wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 2rem;
 
+    .adoption-info {
+      justify-items: start;
+
+      /* 設定文案樣式 */
+      .adoption-title {
+        font-size: 3rem;
+      }
+
+      .adoption-description {
+        font-size: 1.875rem;
+      }
+    }
+  }
+}
 
 
 
