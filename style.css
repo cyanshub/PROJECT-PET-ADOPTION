@@ -76,6 +76,7 @@ a {
   
   --adoption-title-text-color: #267c99;
   --adoption-description-text-color:#5e5c5c;
+  --adoption-background-color: #ffffff;
   --adoption-box-shadow: 2px 10px 12px 0px rgba(0, 0, 0, 0.1);
   
   --footer-text-color: #fff;
@@ -501,6 +502,49 @@ padding: 1rem;
     transform: scale(1, 1.05);
   }
 }
+
+
+/* 領養資訊 adoption 區塊樣式 */
+.adoption-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 135px;
+  background-color: var(--adoption-background-color);
+  box-shadow: var(--adoption-box-shadow);
+  -webkit-box-shadow: var(--adoption-box-shadow);
+  -moz-box-shadow: var(--adoption-box-shadow);
+
+
+  .adoption-image {
+    width: 100%;
+  }
+
+  .adoption-info {
+    padding-top: 1.2rem;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+
+    /* 設定文案樣式 */
+    .adoption-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+      color: var(--adoption-title-text-color);
+    }
+
+    .adoption-description {
+      font-size: 1rem;
+      margin-bottom: 0.9rem;
+      color: var(--adoption-description-text-color);
+    }
+  }
+}
+
+
+
+
 
 
 /* 設定專案樣式: end */
