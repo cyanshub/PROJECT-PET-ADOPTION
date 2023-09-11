@@ -60,13 +60,15 @@ a {
   --main-text-color: #333333;
   --main-background-color: #f6f7f8;
 
+  --navbar-title-text-color: #1a5366;
   --navbar-text-color: #267b98;
   --header-background-color: #ffffff;
   --header-box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
   
   --hamburger-background-color: #267b98;
   
-  --banner-main-text-color: #267b98;
+  --banner-main-title-text-color: #1a5366;
+  --banner-main-description-text-color: #267b98;
   --banner-sub-text-color: #ffffff;
   --banner-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.08);
 
@@ -175,7 +177,7 @@ header {
 }
 
 .navbar-brand-title {
-  color: var(--navbar-text-color);
+  color: var(--navbar-title-text-color);
 }
 
 .nav-item {
@@ -342,12 +344,12 @@ padding: 1rem;
 .main-banner .banner-title {
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: var(--banner-main-text-color);
+  color: var(--banner-main-title-text-color);
 }
 
 .main-banner .banner-description {
   font-size: 1rem;
-  color: var(--banner-main-text-color);
+  color: var(--banner-main-description-text-color);
 }
 
 .sub-banner .banner-title {
@@ -565,6 +567,15 @@ padding: 1rem;
 }
 
 
+/* 網站頁腳footer區塊樣式 */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--footer-text-color);
+  background-color: var(--footer-background-color);
+  letter-spacing: 2px;
+}
 
 
 /* 設定專案樣式: end */
