@@ -97,6 +97,50 @@ a {
 }
 
 
+/* Design the darkmode attribute */
+[data-theme = "dark"] {
+    /* color */
+    --main-text-color: #f6f7f8;
+    --main-background-color: #333333;
+
+
+    --navbar-title-text-color: #f6f7f8;
+    --navbar-text-color: #f6f7f8;
+    --header-background-color: #333333;
+    --header-box-shadow: 0px 2px 12px 0px rgba(255, 255, 255, 0.1);
+
+    --hamburger-background-color: #267b98;
+
+    --banner-main-title-text-color: #1a5366;
+    --banner-main-description-text-color: #267b98;
+    --banner-sub-text-color: #ffffff;
+    --banner-box-shadow: 0px 2px 10px 0px rgba(255, 255, 255, 0.1);
+
+    --card-text-color: #ffffff;
+    --card-background-color: #a9a9a9;
+    --card-box-shadow: 0px 2px 10px 0px rgba(255, 255, 255, 0.1);
+
+    --adoption-title-text-color: #267c99;
+    --adoption-description-text-color: #ffffff;
+    --adoption-background-color: #222222;;
+    --adoption-box-shadow: 2px 10px 12px 0px rgba(255, 255, 255, 0.1);
+
+    --footer-text-color: #fff;
+    --footer-background-color: #4a4a4a;
+
+    --action-text-color: white;
+    --action-background-color: #39bae6;
+    --action-hover-background-color: #267c99;
+    --action-box-shadow: 0 1px 5px 0 rgba(255, 255, 255, 0.1);
+
+
+    /* photo */
+    --main-banner-image-url: url("https://images.unsplash.com/photo-1520087619250-584c0cbd35e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1285&q=80");
+    --sub-banner-image-left-url: url("https://images.unsplash.com/photo-1569809317138-8d2ff6060c4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80");
+    --sub-banner-image-right-url: url("https://images.unsplash.com/photo-1535294435445-d7249524ef2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80")
+  }
+
+
 html,body {
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 1rem;
@@ -166,10 +210,15 @@ header {
 
     .nav-link {
       color: var(--navbar-title-text-color);
+      cursor: pointer;
     }
 
     .navbar-brand-title {
       color: var(--navbar-title-text-color);
+    }
+
+    #darkmode-toggle {
+      display: none;
     }
   }
 
