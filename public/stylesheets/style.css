@@ -222,6 +222,7 @@ header {
     }
   }
 
+
   /* 標題列 header 樣式: 表單下拉功能 */
   .navbar-toggle {
     visibility: hidden;
@@ -638,4 +639,5 @@ footer {
 
 
 /* 設定專案樣式: end */
+/* 網頁樣式似乎沒有被正確載入: 會不會是遞迴式結構導致網頁出錯? */
 
