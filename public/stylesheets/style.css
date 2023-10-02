@@ -174,7 +174,7 @@ html,body {
   box-shadow: var(--action-box-shadow);
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:768px) {
   .action {
     font-size: 1.2rem;
     padding: 0.75rem 2rem;
@@ -200,111 +200,116 @@ header {
   position: fixed;
   top: 0;
   z-index: 10;
+}
 
 
-  .navbar-brand {
-    line-height: 60px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 60px;
+.navbar-brand {
+  line-height: 60px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 60px;
+}
 
-    .nav-link {
-      color: var(--navbar-title-text-color);
-      cursor: pointer;
-    }
 
-    .navbar-brand-title {
-      color: var(--navbar-title-text-color);
-    }
+.navbar-brand .nav-link {
+  color: var(--navbar-title-text-color);
+  cursor: pointer;
+}
 
-    #darkmode-toggle {
-      display: none;
-    }
-  }
+.navbar-brand-title {
+  color: var(--navbar-title-text-color);
+}
 
+#darkmode-toggle {
+  display: none;
+}
+
+
+
+/* 標題列 header 樣式: 表單下拉功能 */
+.navbar-toggle {
+  visibility: hidden;
+  position: absolute;
+}
+
+.navbar-toggle:checked~.nav {
+  transform: scale(1, 1);
+}
+
+.navbar-toggle:checked~.nav .nav-item {
+  transition: opacity .3s ease-out 0.15s;
+  opacity: 1;
+}
+
+.nav {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: var(--header-background-color);
 
   /* 標題列 header 樣式: 表單下拉功能 */
-  .navbar-toggle {
-    visibility: hidden;
-    position: absolute;
-  }
-
-  .navbar-toggle:checked~.nav {
-    transform: scale(1, 1);
-  }
-
-  .navbar-toggle:checked~.nav .nav-item {
-    transition: opacity .3s ease-out 0.15s;
-    opacity: 1;
-  }
-
-  .nav {
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    background-color: var(--header-background-color);
-
-    /* 標題列 header 樣式: 表單下拉功能 */
-    transform: scale(1, 0);
-    transform-origin: top;
-    transition: transform .3s ease-out;
-
-    .nav-item {
-      margin: 1.4rem 0;
-
-      /* 標題列 header 樣式: 表單下拉功能 */
-      opacity: 0;
-    }
-
-    .nav-link {
-      color: var(--navbar-text-color);
-      font-weight: 700;
-    }
-  }
-
-  /* 手刻漢堡排選單樣式 */
-  .navbar-toggle-label {
-    position: absolute;
-    right: 7.5%;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-
-
-    .hamburger,
-    .hamburger::before,
-    .hamburger::after {
-      width: 30px;
-      height: 3px;
-      background-color: var(--hamburger-background-color);
-    }
-
-    .hamburger,
-    .hamburger::before,
-    .hamburger::after {
-      content: "";
-    }
-
-    .hamburger {
-      position: relative;
-    }
-
-    .hamburger::before,
-    .hamburger::after {
-      position: absolute;
-      left: 0;
-    }
-
-    .hamburger::before {
-      top: 8px;
-    }
-
-    .hamburger::after {
-      bottom: 8px;
-    }
-  }
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform .3s ease-out;
 }
+
+.nav .nav-item {
+  margin: 1.4rem 0;
+
+  /* 標題列 header 樣式: 表單下拉功能 */
+  opacity: 0;
+}
+
+.nav .nav-link {
+  color: var(--navbar-text-color);
+  font-weight: 700;
+}
+
+
+
+/* 手刻漢堡排選單樣式 */
+.navbar-toggle-label {
+  position: absolute;
+  right: 7.5%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 30px;
+  height: 3px;
+  background-color: var(--hamburger-background-color);
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+}
+
+.hamburger {
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: 8px;
+}
+
+.hamburger::after {
+  bottom: 8px;
+}
+
 
 
 /* 電腦版標題列header區塊樣式，導入媒體查詢768px */
@@ -312,34 +317,33 @@ header {
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
 
+  .navbar-brand {
+    grid-column: 2/3;
+  }
 
-    .navbar-brand {
-      grid-column: 2/3;
-    }
+  .nav {
+    all: unset;
+    grid-column: 3/4;
+  }
 
-    .nav {
-      all: unset;
-      grid-column: 3/4;
+  .nav-list {
+    height: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: end;
+    grid-gap: 2rem;
+  }
 
-      .nav-list {
-        height: 100%;
-        display: grid;
-        grid-auto-flow: column;
-        align-items: center;
-        justify-content: end;
-        grid-gap: 2rem;
+  .nav-list .nav-item {
+    opacity: 1;
+    margin: 0;
+  }
 
-        .nav-item {
-          opacity: 1;
-          margin: 0;
-        }
-      }
-    }
-
-    .navbar-toggle-label {
-      display: none;
-    }
+  .navbar-toggle-label {
+    display: none;
   }
 }
 
@@ -355,78 +359,78 @@ header {
   grid-template-areas:
     "main main main main"
     "left left right right";
-
-  .main-banner {
-    grid-area: main;
-    background-image: var(--main-banner-image-url);
-
-    .banner-description {
-      font-size: 1rem;
-      color: var(--banner-main-description-text-color);
-    }
-
-    .banner-title {
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      color: var(--banner-main-title-text-color);
-    }
-  }
-
-  .sub-banner-left {
-    grid-area: left;
-    background-image: var(--sub-banner-image-left-url);
-  }
-
-  .sub-banner-right {
-    grid-area: right;
-    background-image: var(--sub-banner-image-right-url);
-  }
-
-  .sub-banner {
-    .banner-title {
-      font-size: 1.2rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-      color: var(--banner-sub-text-color)
-    }
-
-    .banner-description {
-      font-size: 1.2rem;
-      font-weight: 400;
-      letter-spacing: 1px;
-      color: var(--banner-sub-text-color)
-    }
-
-    .action {
-      font-size: 1rem;
-      padding: 0.25rem 1rem;
-    }
-  }
-
-  .main-banner,
-  .sub-banner {
-    padding: 1rem;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
-    box-shadow: var(--banner-box-shadow);
-  }
-
-  .main-banner {
-    justify-content: flex-start;
-  }
-
-  .banner-title {
-    margin-bottom: 0.4rem;
-    font-weight: 600;
-  }
-
-  .banner-description {
-    margin-bottom: 1rem;
-    font-weight: 600;
-  }
 }
+
+.main-banner {
+  grid-area: main;
+  background-image: var(--main-banner-image-url);
+}
+
+.main-banner .banner-description {
+  font-size: 1rem;
+  color: var(--banner-main-description-text-color);
+}
+
+.main-banner .banner-title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--banner-main-title-text-color);
+}
+
+.sub-banner-left {
+  grid-area: left;
+  background-image: var(--sub-banner-image-left-url);
+}
+
+.sub-banner-right {
+  grid-area: right;
+  background-image: var(--sub-banner-image-right-url);
+}
+
+.sub-banner .banner-title {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--banner-sub-text-color)
+}
+
+.sub-banner .banner-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--banner-sub-text-color)
+}
+
+.sub-banner .action {
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+}
+
+
+.main-banner,
+.sub-banner {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-shadow: var(--banner-box-shadow);
+}
+
+.main-banner {
+  justify-content: flex-start;
+}
+
+.banner-title {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.banner-description {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
 
 
 /* 電腦版活動區banner區塊樣式，導入媒體查詢768px */
@@ -435,26 +439,23 @@ header {
     grid-template-areas:
       "main main main left"
       "main main main right";
+  }
 
+  .main-banner {
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-    .main-banner {
-      justify-content: center;
-      align-items: flex-start;
+  .main-banner .banner-title {
+    font-size: 4rem;
+  }
 
-      .banner-title {
-        font-size: 4rem;
-      }
+  .main-banner .banner-description {
+    font-size: 2rem;
+  }
 
-      .banner-description {
-        font-size: 2rem;
-      }
-    }
-
-    .sub-banner {
-      .banner-description {
-        font-size: 1.5rem;
-      }
-    }
+  .sub-banner .banner-description {
+    font-size: 1.5rem;
   }
 }
 
@@ -466,104 +467,109 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1.5rem;
-
-  .card {
-    width: 100%;
-    height: 100%;
-
-    /* 將圖片超出容器的部分隱藏 */
-    overflow: hidden;
-    box-shadow: var(--card-box-shadow);
-    -webkit-box-shadow: var(--card-box-shadow);
-    -moz-box-shadow: var(--card-box-shadow);
-
-    /* 定位樣式 */
-    position: relative;
-
-    /* 設定圖卡圖片轉場效果 */
-    background-color: var(--card-background-color);
+}
 
 
-    .card-img {
-      width: 100%;
-      height: 300px;
-      display: block;
+.card {
+  width: 100%;
+  height: 100%;
 
-      /* 避免圖片因為調整長寬而變形 */
-      object-fit: cover;
+  /* 將圖片超出容器的部分隱藏 */
+  overflow: hidden;
+  box-shadow: var(--card-box-shadow);
+  -webkit-box-shadow: var(--card-box-shadow);
+  -moz-box-shadow: var(--card-box-shadow);
 
-      /* 設定圖卡圖片轉場效果 */
-      transition: opacity .3s ease-out;
-    }
-
-    .card-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-
-      /* 以自身尺寸作為移動距離 */
-      transform: translate(-50%, -50%);
-      color: var(--card-text-color);
-      text-align: center;
-
-      /* 設定圖卡游標懸移文字效果 */
-      transition: opacity .3s ease-out;
-      opacity: 0;
-
-
-      /* 設定圖卡文案樣式 */
-      .card-title {
-        font-size: 1.5rem;
-        margin-bottom: 0.2rem;
-      }
-
-      .card-description {
-        font-size: 1.2rem;
-      }
-    }
-  }
-
-  /* 設定圖卡游標懸移文字效果 */
-  .card:hover .card-text {
-    opacity: 1;
-  }
+  /* 定位樣式 */
+  position: relative;
 
   /* 設定圖卡圖片轉場效果 */
-  .card:hover .card-img {
-    opacity: 0.4;
-  }
-
-  /* 設定邊框轉場特效 */
-  .card::before, .card::after {
-    content: "";
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    transition: transform .4s ease-out;
-  }
-
-  .card::before {
-    border-top: 1px solid var(--card-text-color);
-    border-bottom: 1px solid var(--card-text-color);
-    transform: scale(0,1);
-  }
-
-  .card:hover::before {
-    transform: scale(1.05, 1);
-  }
-
-  .card::after {
-    border-left: 1px solid var(--card-text-color);
-    border-right: 1px solid var(--card-text-color);
-    transform: scale(1,0);
-  }
-
-  .card:hover::after {
-    transform: scale(1, 1.05);
-  }
+  background-color: var(--card-background-color);
 }
+
+
+.card .card-img {
+  width: 100%;
+  height: 300px;
+  display: block;
+
+  /* 避免圖片因為調整長寬而變形 */
+  object-fit: cover;
+
+  /* 設定圖卡圖片轉場效果 */
+  transition: opacity .3s ease-out;
+}
+
+.card .card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* 以自身尺寸作為移動距離 */
+  transform: translate(-50%, -50%);
+  color: var(--card-text-color);
+  text-align: center;
+
+  /* 設定圖卡游標懸移文字效果 */
+  transition: opacity .3s ease-out;
+  opacity: 0;
+}
+
+
+/* 設定圖卡文案樣式 */
+.card-text .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.card-text .card-description {
+  font-size: 1.2rem;
+}
+
+
+/* 設定圖卡游標懸移文字效果 */
+.card:hover .card-text {
+  opacity: 1;
+}
+
+/* 設定圖卡圖片轉場效果 */
+.card:hover .card-img {
+  opacity: 0.4;
+}
+
+
+/* 設定邊框轉場特效 */
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  transition: transform .4s ease-out;
+}
+
+.card::before {
+  border-top: 1px solid var(--card-text-color);
+  border-bottom: 1px solid var(--card-text-color);
+  transform: scale(0, 1);
+}
+
+.card:hover::before {
+  transform: scale(1.05, 1);
+}
+
+.card::after {
+  border-left: 1px solid var(--card-text-color);
+  border-right: 1px solid var(--card-text-color);
+  transform: scale(1, 0);
+}
+
+.card:hover::after {
+  transform: scale(1, 1.05);
+}
+
 
 
 /* 領養資訊 adoption 區塊樣式 */
@@ -576,33 +582,35 @@ header {
   box-shadow: var(--adoption-box-shadow);
   -webkit-box-shadow: var(--adoption-box-shadow);
   -moz-box-shadow: var(--adoption-box-shadow);
-
-
-  .adoption-image {
-    width: 100%;
-  }
-
-  .adoption-info {
-    padding: 1.2rem;
-    display: grid;
-    justify-items: center;
-    align-content: center;
-
-    /* 設定文案樣式 */
-    .adoption-title {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 0.4rem;
-      color: var(--adoption-title-text-color);
-    }
-
-    .adoption-description {
-      font-size: 1rem;
-      margin-bottom: 0.9rem;
-      color: var(--adoption-description-text-color);
-    }
-  }
 }
+
+.adoption-image {
+  width: 100%;
+}
+
+.adoption-info {
+  padding: 1.2rem;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
+
+/* 設定文案樣式 */
+.adoption-info .adoption-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: var(--adoption-title-text-color);
+}
+
+.adoption-info .adoption-description {
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+  color: var(--adoption-description-text-color);
+}
+
+
 
 /* 領養資訊adoption區塊樣式，導入媒體查詢768px */
 @media screen and (min-width:768px) {
@@ -610,21 +618,22 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 2rem;
+  }
 
-    .adoption-info {
-      justify-items: start;
+  .adoption-info {
+    justify-items: start;
+  }
 
-      /* 設定文案樣式 */
-      .adoption-title {
-        font-size: 3rem;
-      }
+  /* 設定文案樣式 */
+  .adoption-info .adoption-title {
+    font-size: 3rem;
+  }
 
-      .adoption-description {
-        font-size: 1.875rem;
-      }
-    }
+  .adoption-info .adoption-description {
+    font-size: 1.875rem;
   }
 }
+
 
 
 /* 網站頁腳footer區塊樣式 */
