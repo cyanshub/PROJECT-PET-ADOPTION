@@ -1,8 +1,7 @@
 // Import json file: 使用JSON檔案提取專案資料
-// import data_json from "/data.json" assert{type:"json"};
+import data_json from "./data.json" assert{type:"json"};
 
-const gitHubName = "PROJECT-PET-ADOPTION";
-import data_json from "/PROJECT-PET-ADOPTION/data.json" assert{type:"json"};
+
 
 // extraction the json file
 const pets = data_json.pets;
