@@ -91,9 +91,9 @@ a {
 
 
   /* photo */
-  --main-banner-image-url: url("./public/images/banner/banner-photo-1.avif");
-  --sub-banner-image-left-url: url("./public/images/banner/banner-photo-2.avif");
-  --sub-banner-image-right-url: url("./public/images/banner/banner-photo-3.avif");
+  --main-banner-image-url: url("./images/banner/banner-photo-1.avif");
+  --sub-banner-image-left-url: url("./images/banner/banner-photo-2.avif");
+  --sub-banner-image-right-url: url("./images/banner/banner-photo-3.avif");
 }
 
 
@@ -135,9 +135,9 @@ a {
 
 
     /* photo */
-    --main-banner-image-url: url("./public/images/banner/banner-photo-1.avif");
-    --sub-banner-image-left-url: url("./public/images/banner/banner-photo-2.avif");
-    --sub-banner-image-right-url: url("./public/images/banner/banner-photo-3.avif");
+    --main-banner-image-url: url("./images/banner/banner-photo-1.avif");
+    --sub-banner-image-left-url: url("./images/banner/banner-photo-2.avif");
+    --sub-banner-image-right-url: url("./images/banner/banner-photo-3.avif");
   }
 
 
