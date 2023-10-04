@@ -4,73 +4,73 @@
       "id": 1,
       "name": "藍哥",
       "age": "7 歲",
-      "image": "./public/images/pets/pet-1.avif"
+      "image": "public/images/pets/pet-1.avif"
     },
     {
       "id": 2,
       "name": "小黑",
       "age": "2 歲",
-      "image": "./public/images/pets/pet-2.avif"
+      "image": "public/images/pets/pet-2.avif"
     },
     {
       "id": 3,
       "name": "花花",
       "age": "4 歲",
-      "image": "./public/images/pets/pet-3.jpeg"
+      "image": "public/images/pets/pet-3.jpeg"
     },
     {
       "id": 4,
       "name": "皮克",
       "age": "3 歲",
-      "image": "./public/images/pets/pet-4.webp"
+      "image": "public/images/pets/pet-4.webp"
     },
     {
       "id": 5,
       "name": "哈金",
       "age": "6 歲",
-      "image": "./public/images/pets/pet-5.webp"
+      "image": "public/images/pets/pet-5.webp"
     },
     {
       "id": 6,
       "name": "大小姐",
       "age": "5 歲",
-      "image": "./public/images/pets/pet-6.jpeg"
+      "image": "public/images/pets/pet-6.jpeg"
     },
     {
       "id": 7,
       "name": "公主",
       "age": "2 歲",
-      "image": "./public/images/pets/pet-7.jpeg"
+      "image": "public/images/pets/pet-7.jpeg"
     },
     {
       "id": 8,
       "name": "獨角獸",
       "age": "2 歲",
-      "image": "./public/images/pets/pet-8.webp"
+      "image": "public/images/pets/pet-8.webp"
     },
     {
       "id": 9,
       "name": "阿獅",
       "age": "3 歲",
-      "image": "./public/images/pets/pet-9.avif"
+      "image": "public/images/pets/pet-9.avif"
     },
     {
       "id": 10,
       "name": "辛巴",
       "age": "2 歲",
-      "image": "./public/images/pets/pet-10.avif"
+      "image": "public/images/pets/pet-10.avif"
     },
     {
       "id": 11,
       "name": "豆皮",
       "age": "2 歲",
-      "image": "./public/images/pets/pet-11.avif"
+      "image": "public/images/pets/pet-11.avif"
     },
     {
       "id": 12,
       "name": "阿瓜",
       "age": "2 歲",
-      "image": "./public/images/pets/pet-12.avif"
+      "image": "public/images/pets/pet-12.avif"
     }
   ]
 }
