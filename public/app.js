@@ -17,7 +17,7 @@ function renderPetlist(data) {
   data.forEach(item => {
     rawHTML += `
       <div class="card">
-            <img src="./${item.image}" alt="${item.name}" class="card-img">
+            <img src="./public/${item.image}" alt="${item.name}" class="card-img">
             <div class="card-text">
               <h3 class="card-title">${item.name}</h3>
               <p class="card-description">${item.age}</p>
